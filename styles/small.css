@@ -115,6 +115,7 @@ nav ul {
     flex-direction: column;
     gap: 1.5rem;
     padding: 2rem;
+    margin-left: 0;
 }
 
 nav li {
@@ -241,14 +242,6 @@ main {
     margin-top: 1rem;
 }
 
-
-
-
-
-
-
-
-
 footer {
     background-color: var(--primary-bg);
     display: flex;
@@ -260,22 +253,4 @@ footer {
 footer p,
 footer span {
     color: #fff;
-}
-
-@media only screen and (min-width: 768px) {
-}
-
-@media only screen and (min-width: 1024px) {
-}
-
-
-@media only screen and (min-width: 1350px) {
-    header {
-        max-width: 1300px;
-    }
-
-    .about {
-        padding: 0;
-        margin-bottom: 2rem;
-    }
 }
