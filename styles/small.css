@@ -3,6 +3,7 @@
     --primary-fg: #FFF;
     --secondary-bg: #FFF8EB;
     --accent1-color: #001524;
+    --accent1-brighter: #00243D;
     --accent2-color: #FFE4AD;
 
     --background: #FFF;
@@ -132,6 +133,10 @@ nav a:hover {
     border-color: #fff;
 }
 
+nav a.active {
+    border-color: #fff;
+}
+
 nav:not(.active) {
     display: none;
 }
@@ -190,6 +195,11 @@ main {
     border-color: var(--accent1-color);
 }
 
+.filters > button:hover {
+    background-color: var(--accent1-brighter);
+    border-color: var(--accent1-brighter);
+}
+
 .courses-cards {
     display: flex;
     flex-direction: column;
@@ -202,6 +212,7 @@ main {
     border-radius: 5px;
     background-color: transparent;
     border: 2px solid var(--primary-bg);
+    transition: all 200ms ease-in-out;
 }
 
 .courses-cards span {
@@ -220,6 +231,14 @@ main {
     content: "✓";
     margin-right: 0.2rem;
     color: var(--primary-fg);
+}
+
+.courses-cards > div:not(.visible) {
+    display: none;
+}
+
+.credit-text {
+    margin-top: 1rem;
 }
 
 

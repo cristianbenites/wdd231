@@ -83,6 +83,7 @@ function listCourseCards() {
         const card = document.createElement('div');
         card.setAttribute('data-subject', course.subject);
         card.setAttribute('data-completed', course.completed);
+        card.classList.add('visible');
 
         const span = document.createElement('span');
         span.textContent = course.title;
@@ -93,7 +94,50 @@ function listCourseCards() {
     });
 
     document.getElementById('courses-cards').replaceChildren(...cards);
+    document.querySelector('#credit-number').textContent = getTotalCredits('all');
+}
+
+function attachFilters() {
+    document.querySelectorAll('[data-filter')
+        .forEach(btn => btn.addEventListener('click', filterCourses));
+}
+
+function filterCourses(evt) {
+    const type = evt.target.dataset.filter;
+
+    document.querySelectorAll('#courses-cards > div').forEach(card => {
+        if (card.dataset.subject.toLowerCase() != type) {
+            card.classList.remove('visible');
+        } else {
+            card.classList.add('visible');
+        }
+
+        if (type == 'all') {
+            card.classList.add('visible');
+        }
+    });
+
+    document.querySelector('#credit-number').textContent = getTotalCredits(type);
+}
+
+function getTotalCredits(type) {
+    if (type == 'all') {
+        return courses.map(c => c.credits).reduce((a, b) => a + b);
+    }
+
+    if (type == 'wdd') {
+        return courses.filter(c => c.subject.toLowerCase() == 'wdd')
+            .map(c => c.credits)
+            .reduce((a, b) => a + b);
+    }
+
+    if (type == 'cse') {
+        return courses.filter(c => c.subject.toLowerCase() == 'cse')
+            .map(c => c.credits)
+            .reduce((a, b) => a + b);
+    }
 }
 
 listCourseCards();
+attachFilters();
 
