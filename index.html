@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WDD 231 - Web Frontend Development I - Cristian Benites</title>
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/small.css" rel="stylesheet">
+    <link href="styles/larger.css" rel="stylesheet">
+    <meta name="author" content="Cristian Benites">
+    <meta name="description" content="WDD 231 - Web Frontend Development I | Cristian Benites | index page">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="profile">
+            <img src="images/cristian_benites.png" alt="My Robo Hash Version">
+        </div>
+        <span>Cristian Benites</span>
+        <button id="hamburger" class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="https://github.com/cristianbenites">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/cristian-benites/">LinkedIn</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section class="card">
+            <div class="card-header">
+                <h2>Course Work</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+        <section class="card">
+            <div class="card-header">
+                <h2>Rio de Janeiro, Brazil</h2>
+            </div>
+            <div class="card-body">
+                <figure>
+                    <img src="images/christ-the-redeemer-rio-de-janeiro.webp" alt="Christ The Redeemer">
+                    <figcaption>Christ The Redeemer</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="card">
+            <div class="card-header">
+                <h2>Web and Computer Programming Certificate</h2>
+            </div>
+            <div class="filters">
+                <button data-filter="all">All</button>
+                <button data-filter="cse">CSE</button>
+                <button data-filter="wdd">WDD</button>
+            </div>
+            <div id="courses-cards" class="courses-cards">
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>
+            &copy;<span id="currentyear"></span> 🏀 Cristian Benites 🍕 Brazil
+        </p>
+        <p class="lastModified"></p>
+    </footer>
+</body>
+
+</html>
