@@ -186,11 +186,6 @@ main {
     text-align: center;
 }
 
-
-.credit-text {
-    margin-top: 1rem;
-}
-
 footer {
     background-color: var(--primary-bg);
     display: flex;
