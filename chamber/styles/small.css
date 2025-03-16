@@ -150,40 +150,70 @@ main {
     padding: 1rem;
 }
 
-.card {
+.members-menu {
+    margin-bottom: 1rem;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
 }
 
-.card .card-header {
+#members.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+.grid .member-card {
     background-color: var(--primary-bg);
-    width: 100%;
-    padding: 1rem 0;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-radius: 15px;
+    padding: 1rem 0.5rem;
+
+    display: grid;
+    justify-items: center;
+    grid-gap: .5rem;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "title title"
+        "tagline tagline"
+        "line line"
+        "img email"
+        "img phone"
+        "img url"
+        "img ."
 }
 
-.card .card-body {
-    padding: 1rem;
+.grid .member-card h2 {
+    grid-area: title;
 }
 
-.card h2 {
-    color: var(--primary-fg);
-    text-align: center;
+.grid .member-card .tagline {
+    grid-area: tagline;
 }
 
-.card-body figure {
-    max-width: 10rem;
-    margin: 0 auto;
+.grid .member-card hr {
+    margin: 0 -.5rem;
+    border-color: var(--primary-fg);
+    grid-area: line;
+    justify-self: stretch;
 }
 
-.card-body figure img {
-    width: 100%;
+.grid .member-card img {
+    grid-area: img;
 }
 
-.card-body figure figcaption {
-    font-size: 0.9em;
-    text-align: center;
+.grid .member-card .email {
+    grid-area: email;
+    justify-self: start;
+}
+
+.grid .member-card .phone {
+    grid-area: phone;
+    justify-self: start;
+}
+
+.grid .member-card .url {
+    grid-area: url;
+    justify-self: start;
 }
 
 footer {

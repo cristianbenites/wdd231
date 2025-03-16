@@ -4,7 +4,7 @@
     "address": "Boulevard du Soleil, Timbuktu, Mali",
     "phone_number": "+55 11 5555-1234",
     "website_url": "https://www.verdevida.com.br",
-    "image_file": "verdevida_logo.png",
+    "image_file": "https://cristianbenites.github.io/wdd231/chamber/verdevida_logo.png",
     "membership_level": 3,
     "industry": "Tecnologia",
     "founded_year": 2012
@@ -14,7 +14,7 @@
     "address": "Rue des Sables, Timbuktu, Mali",
     "phone_number": "+55 21 5555-4567",
     "website_url": "https://www.perolaazulviagens.com.br",
-    "image_file": "perolaazul_icon.jpg",
+    "image_file": "https://cristianbenites.github.io/wdd231/chamber/perolaazul_logo.png",
     "membership_level": 2,
     "industry": "Turismo",
     "founded_year": 2008
@@ -24,7 +24,7 @@
     "address": "Avenue des Oasis, Timbuktu, Mali",
     "phone_number": "+55 31 5555-7890",
     "website_url": "https://www.deliciasurbanas.com.br",
-    "image_file": "deliciasurbanas_logo.png",
+    "image_file": "https://cristianbenites.github.io/wdd231/chamber/deliciasurbanas_logo.png",
     "membership_level": 1,
     "industry": "Alimentos e Bebidas",
     "founded_year": 2015
@@ -34,7 +34,7 @@
     "address": "Quartier de la Santé, Timbuktu, Mali",
     "phone_number": "+55 51 5555-0321",
     "website_url": "https://www.saudeprimeiro.com.br",
-    "image_file": "saudeprimeiro_icon.svg",
+    "image_file": "https://cristianbenites.github.io/wdd231/chamber/saudeprimeiro_logo.png",
     "membership_level": 3,
     "industry": "Saúde",
     "founded_year": 2010
@@ -44,7 +44,7 @@
     "address": "Route de l'Innovation, Timbuktu, Mali",
     "phone_number": "+1 555-0505",
     "website_url": "https://www.futurevisionai.com",
-    "image_file": "futurevision_logo.jpeg",
+    "image_file": "https://cristianbenites.github.io/wdd231/chamber/futurevisionai_logo.png",
     "membership_level": 3,
     "industry": "Artificial Intelligence",
     "founded_year": 2018
@@ -54,7 +54,7 @@
     "address": "Chemin Propre, Timbuktu, Mali",
     "phone_number": "+1 555-0606",
     "website_url": "https://www.cleanwavelaundry.com",
-    "image_file": "cleanwave_logo.tiff",
+    "image_file": "https://cristianbenites.github.io/wdd231/chamber/cleanwave_logo.png",
     "membership_level": 1,
     "industry": "Services",
     "opening_hours": "7 AM - 10 PM"
@@ -64,7 +64,7 @@
     "address": "Rocade des Grimpeurs, Timbuktu, Mali",
     "phone_number": "+1 555-0707",
     "website_url": "https://www.peakclimbgear.com",
-    "image_file": "peakclimb_icon.png",
+    "image_file": "https://cristianbenites.github.io/wdd231/chamber/peakclimb_logo.png",
     "membership_level": 2,
     "industry": "Outdoor Equipment",
     "featured_products": ["Hiking Boots", "Climbing Harnesses", "Tents"]
