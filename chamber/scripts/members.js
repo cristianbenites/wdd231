@@ -27,6 +27,8 @@ const createMemberCard = (member) => {
     const img = document.createElement('img');
     img.src = member.image_file;
     img.alt = `${member.name} Logo`;
+    img.width = '64';
+    img.height = '64';
 
     const email = document.createElement('p');
     email.classList.add('email');
