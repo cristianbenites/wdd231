@@ -22,32 +22,34 @@
     <meta property="og:title" content="Cristian Benites" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://cristianbenites.github.io/wdd231/chamber/directory.html" />
-    <meta property="og:image" content="https://cristianbenites.github.io/wdd231/images/christ-the-redeemer-rio-de-janeiro.webp" />
+    <meta property="og:image" content="https://cristianbenites.github.io/wdd231/chamber/images/timbuktu_site.webp" />
 </head>
 
 <body>
     <header>
-        <div class="profile">
-            <img src="images/logo.svg" alt="Timbuktu Logo">
+        <div class="container">
+            <div class="profile">
+                <img src="images/logo.svg" alt="Timbuktu Logo">
+            </div>
+            <div class="header-site-name">
+                <h2>Timbuktu</h2>
+                <span>Chamber of Commerce</span>
+            </div>
+            <button id="hamburger" class="hamburger-menu" aria-label="Toggle Navbar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                </ul>
+            </nav>
         </div>
-        <div>
-            <h2>Timbuktu</h2>
-            <span>Chamber of Commerce</span>
-        </div>
-        <button id="hamburger" class="hamburger-menu" aria-label="Toggle Navbar">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="#">Join</a></li>
-            <li><a href="#">Discover</a></li>
-        </ul>
-    </nav>
     <main>
         <h1>Directory</h1>
         <section>
@@ -55,41 +57,43 @@
                 <button id="to-grid">Grid</button>
                 <button id="to-list">List</button>
             </div>
-            <div id="members" class="grid"></div>
+            <div id="members" class="list"></div>
         </section>
 
     </main>
     <footer>
-        <section class="footer-contact">
-            <h4>Timbuktu Chamber of Commerce</h4>
-            <address>
-                <span>10 Rue De La Paix</span>
-                <span>Timbuktu, Mali 999</span>
-                <span>info@timbucktucc.org</span>
-                <span>(233) 555-2300</span>
-            </address>
-        </section>
+        <div class="container">
+            <section class="footer-contact">
+                <h4>Timbuktu Chamber of Commerce</h4>
+                <address>
+                    <span>10 Rue De La Paix</span>
+                    <span>Timbuktu, Mali 999</span>
+                    <span>info@timbucktucc.org</span>
+                    <span>(233) 555-2300</span>
+                </address>
+            </section>
 
-        <section class="footer-social">
-            <a href="https://youtube.com">
-                <img src="images/youtube_icon.svg" alt="Youtube">
-            </a>
-            <a href="https://twitter.com">
-                <img src="images/twitter_icon.svg" alt="Twitter">
-            </a>
-            <a href="https://linkedin.com">
-                <img src="images/linkedin_icon.svg" alt="Linkedin">
-            </a>
-        </section>
+            <section class="footer-social">
+                <a href="https://youtube.com">
+                    <img src="images/youtube_icon.svg" alt="Youtube">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="images/twitter_icon.svg" alt="Twitter">
+                </a>
+                <a href="https://linkedin.com">
+                    <img src="images/linkedin_icon.svg" alt="Linkedin">
+                </a>
+            </section>
 
-        <section class="footer-dev">
-            <p>WDD231 Class Project</p>
-            <p>Cristian Benites</p>
-            <p>
-                &copy;<span id="currentyear"></span> Timbuktu Chamber of Commerce
-            </p>
-            <p class="lastModified"></p>
-        </section>
+            <section class="footer-dev">
+                <p>WDD231 Class Project</p>
+                <p>Cristian Benites</p>
+                <p>
+                    &copy;<span id="currentyear"></span> Timbuktu Chamber of Commerce
+                </p>
+                <p class="lastModified"></p>
+            </section>
+        </div>
     </footer>
 </body>
 

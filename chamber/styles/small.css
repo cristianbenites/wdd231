@@ -1,6 +1,8 @@
 :root {
     --primary-bg: #bee4ff;
     --primary-fg: #0047aa;
+    --primary-bg2: #e4f7ff;
+
 
     --secondary-bg: #001d44;
     --secondary-fg: #0047aa;
@@ -26,6 +28,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--secondary-bg);
     margin: 0;
+}
+
+h1 {
+    margin-bottom: 1rem;
 }
 
 p, li, span {
@@ -77,13 +83,16 @@ button:hover, button:active {
 }
 
 header {
+    background-color: var(--primary-bg);
+}
+
+header .container {
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
 
-    background-color: var(--primary-bg);
 }
 
 header .profile {
@@ -106,15 +115,17 @@ header span {
     font-size: 1rem;
 }
 
-nav {
+header nav {
     background-color: var(--primary-bg);
     position: absolute;
     width: 100%;
+    top: 100%;
+    left: 0;
     border-top: 2px solid var(--primary-fg);
     border-bottom: 2px solid var(--primary-fg);
 }
 
-nav ul {
+header nav ul {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -122,27 +133,27 @@ nav ul {
     margin-left: 0;
 }
 
-nav li {
+header nav li {
     list-style: none;
     margin: 0;
 }
 
-nav a {
+header nav a {
     color: var(--primary-fg);
     border: 0;
     font-size: 1.2em;
     border-bottom: 3px solid transparent;
 }
 
-nav a:hover {
+header nav a:hover {
     border-color: var(--primary-fg);
 }
 
-nav a.active {
+header nav a.active {
     border-color: var(--primary-fg);
 }
 
-nav:not(.active) {
+header nav:not(.active) {
     display: none;
 }
 
@@ -157,10 +168,25 @@ main {
     gap: 1rem;
 }
 
+.member-card p span {
+    font-weight: 400;
+}
+
+.member-card .email,
+.member-card .phone,
+.member-card .url {
+    justify-self: start;
+    font-weight: 800;
+}
+
+.member-card p {
+    line-break: anywhere;
+}
+
 #members.grid {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .grid .member-card {
@@ -203,21 +229,66 @@ main {
 
 .grid .member-card .email {
     grid-area: email;
-    justify-self: start;
 }
 
 .grid .member-card .phone {
     grid-area: phone;
-    justify-self: start;
 }
 
 .grid .member-card .url {
     grid-area: url;
-    justify-self: start;
+}
+
+#members.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list .member-card {
+    background-color: var(--primary-bg);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    padding:1rem;
+    gap: 0.25rem;
+}
+
+.list .member-card:nth-child(even) {
+    background-color: var(--primary-bg2);
+}
+
+.list .member-card:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.list .member-card:last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.list .member-card h2 {
+    font-size: 1rem;
+    font-family: var(--paragraph-font);
+    color: var(--primary-fg);
+}
+
+.list .member-card hr {
+    display: none;
+}
+
+.list .member-card img {
+    display: none;
+}
+
+.list .member-card p span {
+    display: block;
 }
 
 footer {
     background-color: var(--primary-bg);
+}
+
+footer .container {
     display: flex;
     flex-direction: column;
     align-items: start;

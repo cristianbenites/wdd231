@@ -1,6 +1,6 @@
 @media only screen and (min-width: 768px) {
     header {
-        justify-content: center;
+        justify-content: space-between;
         gap: 2rem;
     }
 
@@ -8,93 +8,54 @@
         max-width: 8rem;
     }
 
-    header span {
+    header h2 {
         font-size: 2rem;
+    }
+
+    header span {
+        font-size: 1.5rem;
     }
 
     .hamburger-menu {
         display: none;
     }
 
-    nav {
+    header nav {
         position: relative;
         display: flex;
+        justify-content: end;
+        width: auto;
+        border: 0;
     }
 
-    nav ul {
+    .header-site-name {
+        margin-right: auto;
+    }
+
+    header nav ul {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        padding: 0;
     }
 
-    nav:not(.active) {
+    header nav:not(.active) {
         display: flex;
     }
 
-    .filters {
-        padding: 1rem 0;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    .filters > button {
-        max-width: 15rem;
-    }
-
-    .credit-text {
-        text-align: center;
-    }
-
-    .courses-cards {
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        grid-gap: 1rem;
-        place-items: center;
-        justify-content: center;
-        justify-items: stretch;
-        align-items: stretch;
-        max-width: 1300px;
-    }
-
-    .courses-cards > div {
-        display: flex;
+    footer .container {
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-    }
-
-    .card-body figure {
-        max-width: 20rem;
-    }
-
-    .card-body figure figcaption {
-        font-size: 1em;
     }
 }
 
 @media only screen and (min-width: 1024px) {
-    nav ul {
+    header .container,
+    nav ul,
+    main,
+    footer .container {
         margin: 0 auto;
-        max-width: 1200px;
-    }
-
-    main {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(300px, 1fr));
-        gap: 1rem;
-        margin: 0 auto;
-        max-width: 1200px
-    }
-
-    main h1 {
-        grid-column: 1 / -1;
-    }
-
-    main section:nth-of-type(1) {
-        grid-column: 1 / 3;
-    }
-
-    main section:last-child {
-        grid-column: 1 / -1;
+        max-width: 1300px;
     }
 }

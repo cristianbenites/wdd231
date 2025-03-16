@@ -7,6 +7,8 @@ const buildData = async () => {
     const cards = members.map(createMemberCard);
 
     document.getElementById('members').replaceChildren(...cards);
+    document.getElementById('members').classList.add('grid');
+    document.getElementById('members').classList.remove('list');
 }
 
 const createMemberCard = (member) => {
@@ -55,9 +57,23 @@ const createMemberCard = (member) => {
     card.appendChild(phone);
     card.appendChild(url);
 
-    return member;
+    return card;
 };
 
+const toGrid = () => {
+    document.getElementById('members').classList.add('grid');
+    document.getElementById('members').classList.remove('list');
+}
 
+const toList = () => {
+    document.getElementById('members').classList.remove('grid');
+    document.getElementById('members').classList.add('list');
+}
+
+const runGridListSwitcher = () => {
+    document.getElementById('to-grid').addEventListener('click', toGrid);
+    document.getElementById('to-list').addEventListener('click', toList);
+}
 
 buildData();
+runGridListSwitcher();
