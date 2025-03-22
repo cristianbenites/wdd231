@@ -18,10 +18,11 @@
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/members.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
 
     <meta property="og:title" content="Cristian Benites" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://cristianbenites.github.io/wdd231/chamber/directory.html" />
+    <meta property="og:url" content="https://cristianbenites.github.io/wdd231/chamber/index.html" />
     <meta property="og:image" content="https://cristianbenites.github.io/wdd231/chamber/images/timbuktu_site.webp" />
 </head>
 
@@ -51,12 +52,43 @@
         </div>
     </header>
     <main>
-        <h1>Directory</h1>
+        <div class="home-cta">
+            <img src="images/business-buildings.webp" alt="Business Buildings">
+            <button>Keynote Tickets</button>
+        </div>
+
+        <h1>Home</h1>
+        <div class="home-grid">
+            <section class="events">
+                <h2>Events</h2>
+                <p>Upcoming...</p>
+            </section>
+            <section class="weather">
+                <h2>Current Weather</h2>
+                <img id="weather-icon"
+                    src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D"
+                    alt="Weather Icon"
+                    width="100"
+                    height="100">
+                <div class="weather-content">
+                    <p id="weather-temperature"></p>
+                    <ul>
+                        <li id="weather-description"></li>
+                        <li>High: <span id="weather-high"></span></li>
+                        <li>Low: <span id="weather-low"></span></li>
+                        <li>Humidity: <span id="weather-humidity"></span></li>
+                        <li>Sunrise: <span id="weather-sunrise"></span></li>
+                        <li>Sunset: <span id="weather-sunset"></span></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Weather Forecast</h2>
+                <div id="weather-forecast">
+                </div>
+            </section>
+        </div>
         <section>
-            <div class="members-menu">
-                <button id="to-grid">Grid</button>
-                <button id="to-list">List</button>
-            </div>
             <div id="members" class="list"></div>
         </section>
 

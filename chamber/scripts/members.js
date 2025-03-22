@@ -73,8 +73,15 @@ const toList = () => {
 }
 
 const runGridListSwitcher = () => {
-    document.getElementById('to-grid').addEventListener('click', toGrid);
-    document.getElementById('to-list').addEventListener('click', toList);
+    const toGrid = document.getElementById('to-grid');
+    if (toGrid) {
+        toGrid.addEventListener('click', toGrid);
+    }
+
+    const toList = document.getElementById('to-list');
+    if (toList) {
+        toList.addEventListener('click', toList);
+    }
 }
 
 buildData();
