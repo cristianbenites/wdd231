@@ -192,6 +192,39 @@ main {
     line-break: anywhere;
 }
 
+.member-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.spotlight {
+    display: block;
+    border-radius: 10px;
+
+    padding: 0.8rem 1.1rem;
+    text-transform: uppercase;
+    grid-area: a;
+    justify-self: left;
+}
+
+.spotlight.gold {
+    background-color: #D4AF37;
+    color: #001D44;
+}
+
+.spotlight.silver {
+    background-color: #B0B0B0;
+    color: #1A1A1D;
+}
+
+.grid .member-card.gold {
+    border: 2px solid #D4AF37;
+}
+
+.grid .member-card.silver {
+    border: 2px solid #B0B0B0;
+}
+
 #members.grid {
     display: grid;
     gap: 1rem;
@@ -217,8 +250,21 @@ main {
         "img ."
 }
 
+.grid .member-card.gold,
+.grid .member-card.silver {
+    grid-template-areas:
+        "title title"
+        "tagline tagline"
+        "line line"
+        "img email"
+        "img phone"
+        "img url"
+        "spotlight spotlight"
+}
+
 .grid .member-card h2 {
     grid-area: title;
+    z-index: 5;
 }
 
 .grid .member-card .tagline {
@@ -360,7 +406,7 @@ footer .footer-social a img {
 	object-fit: cover;
 }
 
-.home-cta button {
+.home-cta a {
     position: absolute;
     bottom: 10%;
     right: 10%;
