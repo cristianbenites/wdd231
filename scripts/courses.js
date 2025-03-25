@@ -90,6 +90,10 @@ function listCourseCards() {
 
         card.appendChild(span);
 
+        card.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
+
         return card;
     });
 
@@ -138,6 +142,28 @@ function getTotalCredits(type) {
     }
 }
 
+function displayCourseDetails(course) {
+    const courseDetails = document.getElementById('course-details');
+    const content = document.querySelector('#course-details div');
+
+    content.innerHTML = `
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+
+    courseDetails.showModal();
+}
+
+function runCloseModal() {
+    document.querySelector('#course-details button')
+        .addEventListener('click', () =>
+            document.querySelector('#course-details').close());
+}
 listCourseCards();
 attachFilters();
+runCloseModal();
 

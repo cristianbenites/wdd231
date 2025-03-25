@@ -19,10 +19,10 @@
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/courses.js" defer></script>
 
-    <meta property="og:title" content="Cristian Benites" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://cristianbenites.github.io/wdd231/index.html" />
-    <meta property="og:image" content="https://cristianbenites.github.io/wdd231/images/christ-the-redeemer-rio-de-janeiro.webp" />
+    <meta property="og:title" content="Cristian Benites">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cristianbenites.github.io/wdd231/index.html">
+    <meta property="og:image" content="https://cristianbenites.github.io/wdd231/images/christ-the-redeemer-rio-de-janeiro.webp">
 </head>
 
 <body>
@@ -80,10 +80,14 @@
                 <button data-filter="wdd">WDD</button>
             </div>
             <p class="credit-text">The total number of credits listed below is <span id="credit-number">0</span>.</p>
-            <div id="courses-cards" class="courses-cards">
-            </div>
-        </section>
+            <div id="courses-cards" class="courses-cards"></div>
 
+
+            <dialog id="course-details">
+                <button id="closeModal">✖️</button>
+                <div></div>
+            </dialog>
+        </section>
     </main>
     <footer>
         <p>
