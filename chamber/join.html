@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timbuktu Chamber of Commerce - Join us</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/small.css" rel="stylesheet">
+    <link href="styles/larger.css" rel="stylesheet">
+    <meta name="author" content="Cristian Benites">
+    <meta name="description" content="Timbuktu Chamber of Commerce - Join Page">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+
+    <meta property="og:title" content="Timbuktu Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cristianbenites.github.io/wdd231/chamber/index.html">
+    <meta property="og:image" content="https://cristianbenites.github.io/wdd231/chamber/images/timbuktu_site.webp">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="profile">
+                <img src="images/logo.svg" alt="Timbuktu Logo">
+            </div>
+            <div class="header-site-name">
+                <h2>Timbuktu</h2>
+                <span>Chamber of Commerce</span>
+            </div>
+            <button id="hamburger" class="hamburger-menu" aria-label="Toggle Navbar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a class="active" href="join.html">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Join</h1>
+        <div class="join-grid">
+            <section>
+                <h2>Membership Application Form</h2>
+                <form action="thankyou.html"
+                    method="get"
+                >
+                    <label>* First name: <input
+                        type="text"
+                        required
+                        name="name"
+                        autocomplete="given-name"
+                        title="Put your first name here"
+                        placeholder="John"
+                    ></label>
+                    <label>* Last name: <input
+                        type="text"
+                        required
+                        name="last"
+                        autocomplete="family-name"
+                        title="Put your family name here"
+                        placeholder="Doe"
+                    ></label>
+                    <label>* Organization: <input
+                        type="text"
+                        required
+                        name="organization"
+                        pattern="^[A-Za-z\- ]{7,}$"
+                        autocomplete="organization-title"
+                        title="Add the organizational title"
+                        placeholder="Timbuktu Store"
+                    ></label>
+                    <label>* Email address: <input
+                        type="email"
+                        required
+                        name="email"
+                        autocomplete="email"
+                        title="The email of your business"
+                        placeholder="ceo@example.com"
+                    ></label>
+                    <label>* Phone number: <input
+                        type="tel"
+                        required
+                        name="phone"
+                        autocomplete="tel"
+                        title="Your phone number"
+                        placeholder="1-855-555-6502"
+                    ></label>
+                    <label>* Membership Level:
+                        <select required name="membership-level">
+                            <option value="Non Profit">Non Profit Membership</option>
+                            <option value="Bronze">Bronze Membership</option>
+                            <option value="Silver">Silver Membership</option>
+                            <option value="Gold">Gold Membership</option>
+                        </select>
+                    </label>
+                    <label>Description:
+                        <textarea
+                            name="description"
+                            title="A description of your business or organization"
+                            rows="5"
+                            cols="80"
+                        ></textarea>
+                    </label>
+                    <input
+                        type="hidden"
+                        value=""
+                        id="timestamp"
+                        name="timestamp"
+                    >
+                    <button>Join the Chamber</button>
+                </form>
+            </section>
+            <section class="membership-levels">
+                <h2>Membership Levels</h2>
+                <div class="membership-card">
+                    <h3>Non Profit Membership Level</h3>
+                    <button data-level="1">Learn More</button>
+                </div>
+                <div class="membership-card">
+                    <h3>Bronze Membership Level</h3>
+                    <button data-level="2">Learn More</button>
+                </div>
+                <div class="membership-card">
+                    <h3>Silver Membership Level</h3>
+                    <button data-level="3">Learn More</button>
+                </div>
+                <div class="membership-card">
+                    <h3>Gold Membership Level</h3>
+                    <button data-level="4">Learn More</button>
+                </div>
+            </section>
+        </div>
+        <dialog id="membership-dialog">
+            <button id="closeModal">✖️</button>
+            <div></div>
+        </dialog>
+    </main>
+    <footer>
+        <div class="container">
+            <section class="footer-contact">
+                <h4>Timbuktu Chamber of Commerce</h4>
+                <address>
+                    <span>10 Rue De La Paix</span>
+                    <span>Timbuktu, Mali 999</span>
+                    <span>info@timbucktucc.org</span>
+                    <span>(233) 555-2300</span>
+                </address>
+            </section>
+
+            <section class="footer-social">
+                <a href="https://youtube.com">
+                    <img src="images/youtube_icon.svg" alt="Youtube">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="images/twitter_icon.svg" alt="Twitter">
+                </a>
+                <a href="https://linkedin.com">
+                    <img src="images/linkedin_icon.svg" alt="Linkedin">
+                </a>
+            </section>
+
+            <section class="footer-dev">
+                <p>WDD231 Class Project</p>
+                <p>Cristian Benites</p>
+                <p>
+                    &copy;<span id="currentyear"></span> Timbuktu Chamber of Commerce
+                </p>
+                <p class="lastModified"></p>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>
