@@ -74,7 +74,7 @@
                         title="Put your family name here"
                         placeholder="Doe"
                     ></label>
-                    <label>* Organization: <input
+                    <label>* Organizational Title: <input
                         type="text"
                         required
                         name="organization"
@@ -99,8 +99,17 @@
                         title="Your phone number"
                         placeholder="1-855-555-6502"
                     ></label>
+                    <label>* Business/Organization's Name: <input
+                        type="text"
+                        required
+                        name="business"
+                        autocomplete="organization"
+                        title="The name of the business or organization"
+                        placeholder="America Store SA"
+                    ></label>
                     <label>* Membership Level:
                         <select required name="membership-level">
+                            <option value="">Select one...</option>
                             <option value="Non Profit">Non Profit Membership</option>
                             <option value="Bronze">Bronze Membership</option>
                             <option value="Silver">Silver Membership</option>
@@ -121,7 +130,7 @@
                         id="timestamp"
                         name="timestamp"
                     >
-                    <button>Join the Chamber</button>
+                    <button type="submit">Join the Chamber</button>
                 </form>
             </section>
             <section class="membership-levels">
