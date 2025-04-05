@@ -595,4 +595,64 @@ dialog button {
     max-width: 40rem;
 }
 
+#discover-welcome {
+    margin-bottom: 1rem;
+}
+
+.grid-discover {
+    display: grid;
+    gap: 1rem;
+}
+
+.discover-card {
+    background-color: var(--primary-bg);
+    border-radius: 15px;
+    padding: 1rem;
+
+    display: grid;
+    gap: .5rem;
+    grid-template-areas:
+        "title"
+        "image"
+        "description"
+        "address"
+        "button";
+}
+
+.discover-card h2 {
+    text-align: center;
+    grid-area: title;
+}
+
+.discover-card address {
+    color: var(--primary-fg);
+    grid-area: address;
+}
+
+.discover-card figure {
+    max-height: 20rem;
+    grid-area: image;
+}
+
+.discover-card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.discover-card p {
+    grid-area: description;
+}
+
+.discover-card button {
+    background-color: var(--primary-bg2);
+    border-radius: 10px;
+    grid-area: button;
+}
+
+.discover-card button:active,
+.discover-card button:hover {
+    border-color: var(--primary-fg);
+}
+
 

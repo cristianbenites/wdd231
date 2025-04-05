@@ -10,6 +10,21 @@
     .home-cta {
         height: 20rem;
     }
+
+    .discover-card {
+        grid-template-columns: 18rem auto;
+        gap: 1rem;
+        grid-template-areas:
+            "image title"
+            "image address"
+            "image description"
+            "image button";
+    }
+
+    .discover-card figure {
+        max-width: 18rem;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -67,6 +82,7 @@
         margin-bottom: 3rem;
     }
 
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -80,5 +96,14 @@
 
     .home-cta {
         height: 30rem;
+    }
+
+    .grid-discover {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .discover-card {
+        grid-template-columns: minmax(10rem, 16rem) auto;
     }
 }
