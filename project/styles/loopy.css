@@ -1,0 +1,499 @@
+:root {
+    --primary-bg: #f96939;
+    --primary-fg: #fef0eb;
+
+    --background: #fef0eb;
+    --white: #fff;
+
+    --accent1-color : #220901;
+    --accent2-color: #594f4a;
+    --accent2-lighter: #b5aba6;
+
+    --heading-font: 'Noto Serif', serif;
+    --paragraph-font: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    background-color: var(--background);
+}
+
+h1, h2, h3, h4, h5, h6, th {
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+}
+
+td, p, figcaption, dt, dd, li, span {
+    font-family: var(--paragraph-font);
+    color: var(--accent2-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent1-color);
+}
+
+button {
+    cursor: pointer;
+    color: var(--primary-bg);
+    background-color: transparent;
+    border: 1px solid var(--primary-bg);
+    padding: 1rem;
+    text-transform: uppercase;
+    display: inline-block;
+    max-width: 8rem;
+    transition: all 200ms ease-in-out;
+}
+
+button:hover, button:active {
+    color: var(--primary-fg);
+    background-color: var(--primary-bg);
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+header > a {
+    display: flex;
+}
+
+header img {
+    max-width: 5rem;
+}
+
+header label {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+header label span,
+header label .center span {
+    display: block;
+    width: 2rem;
+    height: 5px;
+    background-color: var(--primary-bg);
+    border-radius: 5px;
+    transition: all 0.2s ease-out;
+}
+
+header input[type="checkbox"]:checked ~ label > span:not(.center) {
+    background-color: transparent;
+}
+
+header label .center {
+    position: relative;
+}
+
+header label .center span {
+    position: absolute;
+    width: 1rem;
+}
+
+header input[type="checkbox"]:checked ~ label {
+    transform: rotate(180deg);
+}
+
+header input[type="checkbox"]:checked ~ label .center span:first-child {
+    transform: rotate(45deg);
+    top: 100%;
+    left: -5%;
+}
+header input[type="checkbox"]:checked ~ label .center span:last-child {
+    transform: rotate(-45deg);
+    top: -100%;
+    left: -5%;
+}
+
+header nav {
+    background-color: rgba(0,0,0 , 0.9);
+
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 99;
+}
+
+header nav ul {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 80vw;
+    height: 100vh;
+    padding: 2rem;
+    border-top: 1px solid var(--primary-bg);
+
+    position: absolute;
+    right: 0;
+}
+
+header nav li {
+    list-style: none;
+    margin: 0;
+}
+
+header nav a {
+    border: 0;
+    font-size: 1.2em;
+}
+
+header input[type="checkbox"]:not(:checked) ~ nav {
+    display: none;
+}
+
+header input[type="checkbox"] {
+    display: none;
+}
+
+.hero {
+    position: relative;
+	margin: 0 auto;
+    background: #000;
+    overflow: hidden;
+    width: 100%;
+    height: 30rem;
+}
+
+.hero img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+    opacity: 30%;
+}
+
+.hero .cta {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    margin-left: 15px;
+    background: transparent;
+    padding: 1.5rem;
+    max-width: 400px;
+}
+
+.hero .cta h2 {
+    font-size: 2em;
+}
+
+.hero .cta p {
+    font-size: 1.4em;
+}
+
+.hero .cta p,
+.hero .cta h2 {
+    color: var(--white);
+}
+
+.hero .cta p,
+.cta .btn {
+    margin-top: 1rem;
+}
+
+.btn {
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--primary-fg);
+    background-color: var(--primary-bg);
+    border: 0;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    display: inline-block;
+}
+
+section h2 {
+    color: var(--accent1-color);
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: .1rem;
+    background-color: var(--accent1-color);
+    margin-top: 1rem;
+}
+
+section {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.sec-1 {
+    background-color: var(--primary-bg);
+}
+
+.sec-1 h2 {
+    color: var(--primary-fg);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sec-1 h2::after {
+    background-color: var(--primary-fg);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sec-1 img {
+    width: 100%;
+    max-width: 5rem;
+}
+
+.sec-1 h3,
+.sec-1 p {
+    color: var(--primary-fg);
+    margin-top: 0.5rem;
+}
+
+.sec-2 {
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 5rem auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    place-items: center;
+    justify-content: center;
+    justify-items: stretch;
+    align-items: stretch;
+    max-width: 1300px;
+}
+
+.sec-2 > h2 {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+}
+
+.deliver-icon {
+    transform: scale(1.1);
+    margin-bottom: -1rem;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--accent2-lighter);
+}
+
+.product-card figure {
+    max-height: 20rem;
+}
+
+.product-card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.product-body p {
+    text-align: center;
+}
+
+.product-body span {
+    color: var(--accent1-color);
+}
+
+footer {
+    background-color: var(--primary-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+footer p,
+footer span {
+    color: #fff;
+}
+
+.about {
+    gap: 1rem;
+}
+
+.about h2 {
+    margin-bottom: 1rem;
+}
+
+.cart {
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.cart li {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.cart li button {
+    padding: 5px;
+    margin-left: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        padding: 2rem;
+    }
+
+    .hero {
+        height: 40rem;
+    }
+
+    .hero .cta {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 600px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero .cta p {
+        line-height: 1.8em;
+    }
+
+    .hero .cta p,
+    .cta .btn {
+        margin-top: 1.5rem;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+
+    h3 {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .sec-1 {
+        padding: 3.5rem;
+        display: grid;
+        grid-template-rows: 5rem auto;
+        grid-template-columns: repeat(3, minmax(100px, 350px));
+        grid-gap: 2.5rem;
+        justify-content: center;
+        justify-items: center;
+        align-items: start;
+    }
+
+    .sec-1 > h2 {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+    }
+
+    .deliver-icon {
+        transform: scale(1.3);
+        margin-bottom: 0;
+    }
+
+    .icon-card {
+        max-width: 350px;
+    }
+
+    .cart,
+    .sec-2 {
+        padding: 2rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    header {
+        padding: 2.5rem 0rem;
+        max-width: 980px;
+        margin: 0 auto;
+    }
+
+    header img {
+        max-width: 8rem;
+    }
+
+    header label {
+        display: none;
+    }
+
+    header input[type="checkbox"]:checked ~ nav,
+    header input[type="checkbox"]:not(:checked) ~ nav,
+    header nav {
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        gap: 2rem;
+        width: auto;
+        height: auto;
+        padding: 0;
+        border-top: 0;
+        position: relative;
+    }
+
+    header nav a {
+        border: 0;
+        font-size: 1.4em;
+        color: #000;
+    }
+
+    .hero .cta h2 {
+        font-size: 3em;
+    }
+
+    .hero .cta {
+        max-width: 800px;
+    }
+
+    .cart,
+    .about {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+}
+
+
+@media only screen and (min-width: 1350px) {
+    header {
+        max-width: 1300px;
+    }
+
+    .about {
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+}
