@@ -14,8 +14,9 @@ function buildPlaces() {
 
         const figure = document.createElement('figure');
         const img = document.createElement('img');
-        img.src = place.img;
+        img.src = `images/${place.img}`;
         img.alt = `${place.name} Picture`;
+        img.loading = 'lazy';
         img.width = '300';
         img.height = '200';
 
