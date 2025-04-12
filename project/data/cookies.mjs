@@ -45,5 +45,77 @@ export const cookies = [{
     "displayPrice": "R$ 16.00",
     "price": 16.0,
     "imageUrl": "images/traditional.webp"
-  }
-]
+  },
+  {
+    "id": "7",
+    "title": "Triple Chocolate Bliss",
+    "description": "An indulgent dough packed with milk, dark, and white chocolate chunks for a rich and satisfying chocolate overload.",
+    "displayPrice": "R$ 18.50",
+    "price": 18.5,
+    "imageUrl": "images/milka-oreo.webp"
+  },
+  {
+    "id": "8",
+    "title": "Red Velvet Dream",
+    "description": "Velvety red dough with chunks of white chocolate and a creamy cheesecake filling, topped with a white chocolate drizzle.",
+    "displayPrice": "R$ 19.50",
+    "price": 19.5,
+    "imageUrl": "images/kinder-bueno.webp"
+  },
+  {
+    "id": "9",
+    "title": "Caramel Pecan Delight",
+    "description": "Buttery dough with caramel chunks and toasted pecans, topped with a drizzle of salted caramel sauce.",
+    "displayPrice": "R$ 20.00",
+    "price": 20.0,
+    "imageUrl": "images/chocotella.webp"
+  },
+  {
+    "id": "10",
+    "title": "Raspberry White Chocolate",
+    "description": "A fruity twist with raspberries and white chocolate chunks, perfectly balanced for a refreshing and sweet experience.",
+    "displayPrice": "R$ 18.00",
+    "price": 18.0,
+    "imageUrl": "images/biscoff.webp"
+  },
+  {
+    "id": "11",
+    "title": "Matcha Bliss",
+    "description": "Dough infused with premium matcha powder, featuring white chocolate chips for a unique and sophisticated flavor.",
+    "displayPrice": "R$ 21.50",
+    "price": 21.5,
+    "imageUrl": "images/dulce-de-leche-and-nuts.webp"
+  },
+  {
+    "id": "12",
+    "title": "Peanut Butter Explosion",
+    "description": "Packed with peanut butter chunks and semi-sweet chocolate, filled with a creamy peanut butter center.",
+    "displayPrice": "R$ 19.50",
+    "price": 19.5,
+    "imageUrl": "images/traditional.webp"
+  },
+  {
+    "id": "13",
+    "title": "S'mores Delight",
+    "description": "A campfire classic with marshmallows, milk chocolate chunks, and graham cracker crumbs for that cozy s'mores flavor.",
+    "displayPrice": "R$ 20.50",
+    "price": 20.5,
+    "imageUrl": "images/milka-oreo.webp"
+  },
+  {
+    "id": "14",
+    "title": "Coconut Chocolate Paradise",
+    "description": "Dough with shredded coconut and milk chocolate chunks, filled with creamy coconut filling for a tropical escape.",
+    "displayPrice": "R$ 18.50",
+    "price": 18.5,
+    "imageUrl": "images/kinder-bueno.webp"
+  },
+  {
+    "id": "15",
+    "title": "Lemon Blueberry Zest",
+    "description": "Refreshing lemon-flavored dough with blueberries and a touch of white chocolate for a zesty and fruity bite.",
+    "displayPrice": "R$ 18.00",
+    "price": 18.0,
+    "imageUrl": "images/chocotella.webp"
+  }]
+
