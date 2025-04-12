@@ -292,6 +292,22 @@ section {
     grid-column: 1 / -1;
 }
 
+.cookie-details {
+    border: 0;
+    border-bottom: 1px solid transparent;
+}
+
+.cookie-details:hover {
+    border-color: var(--primary-bg);
+    color: var(--primary-bg);
+    background-color: transparent;
+}
+
+.buttons-div {
+    display: flex;
+    gap: 1rem;
+}
+
 .deliver-icon {
     transform: scale(1.1);
     margin-bottom: -1rem;
@@ -389,6 +405,33 @@ footer span {
 
 .newsletter button {
     max-width: 100%;
+}
+
+dialog {
+    border: 1px solid rgb(0 0 0 / 0.1);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: var(--background);
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+::backdrop {
+    background-color: rgb(0 0 0 / 0.5);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
 }
 
 @media only screen and (min-width: 768px) {

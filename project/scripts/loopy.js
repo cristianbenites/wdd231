@@ -9,7 +9,6 @@ function getDates() {
     const lastModElmt = document.querySelector(".lastModified");
     lastModElmt.innerHTML = `Last Modification: ${document.lastModified}`;
 }
-getDates();
 
 function createCookieCards() {
     const section = document.querySelector('.sec-2');
@@ -49,24 +48,31 @@ function makeCard(cookie) {
     const h3 = document.createElement('h3');
     h3.textContent = cookie.title;
 
-    const p = document.createElement('p');
-    p.textContent = cookie.description;
-
     const span = document.createElement('span');
     span.textContent = cookie.displayPrice;
+
+    const details = document.createElement('button');
+    details.textContent = 'Details';
+    details.classList.add('cookie-details');
+    details.setAttribute('data-product-id', cookie.id);
+    details.addEventListener('click', () => seeDetails(cookie));
 
     const button = document.createElement('button');
     button.textContent = 'Add to cart';
     button.setAttribute('data-product-id', cookie.id);
     button.addEventListener('click', () => addToCart(cookie));
 
+    const buttonsDiv = document.createElement('div');
+    buttonsDiv.classList.add('buttons-div');
+    buttonsDiv.appendChild(button);
+    buttonsDiv.appendChild(details);
+
     const body = document.createElement('div');
     body.classList.add('product-body');
 
     body.appendChild(h3);
-    body.appendChild(p);
     body.appendChild(span);
-    body.appendChild(button);
+    body.appendChild(buttonsDiv);
 
     const card = document.createElement('div');
     card.classList.add('product-card');
@@ -76,7 +82,19 @@ function makeCard(cookie) {
 
     return card;
 }
-createCookieCards();
+
+function seeDetails(cookie) {
+    const cookieDetails = document.getElementById('cookie-details');
+    const content = document.querySelector('#cookie-details div');
+
+    content.innerHTML = `
+        <h2>${cookie.title}</h2>
+        <p>${cookie.description}</p>
+        <span>${cookie.displayPrice}</span>
+    `;
+
+    cookieDetails.showModal();
+}
 
 function getSelectedProducts() {
     const saved = localStorage.getItem('shopping-cart');
@@ -172,4 +190,17 @@ function run() {
     }
 }
 
+function runCloseModal() {
+    const closeBtn = document.querySelector('#cookie-details button');
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () =>
+            document.querySelector('#cookie-details').close());
+    }
+
+}
+
+getDates();
+createCookieCards();
 run();
+runCloseModal();
