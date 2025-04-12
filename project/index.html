@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Loopy Cookies</title>
+        <link rel="icon" href="favicon.ico">
+        <link href="styles/loopy.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+        <meta name="author" content="Cristian Benites">
+        <meta name="description" content="Loopy Cookies for all tastes | Cristian Benites | index page">
+
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <img src="images/logo.svg" alt="Loopy Cookies Logo">
+            </a>
+
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <span></span>
+                <span class="center">
+                    <span></span>
+                    <span></span>
+                </span>
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="hero">
+                <img src="images/loopy-banner.webp" alt="Cookies Image" width="850" height="300">
+                <div class="cta">
+                    <h2>The Best New York Style Cookies</h2>
+                    <p>
+                        Find the best flavors for all different kinds of tastes.
+                        Contact us at any time to learn more!
+                    </p>
+                    <a href="catalog.html" class="btn">SEE CATALOG</a>
+                </div>
+            </div>
+
+            <section class="sec-1">
+                <h2>As You Want... As You Need</h2>
+
+                <div class="icon-card">
+                    <img src="images/cookie-icon.svg" alt="Icon of a cookie">
+                    <h3>Classic & Stuffed Cookie Delight</h3>
+                    <p>
+                        Indulge in our delectable range of cookies, from traditional classics to irresistibly stuffed creations.
+                    </p>
+                </div>
+
+                <div class="icon-card">
+                    <img class="deliver-icon" src="images/delivery-icon.svg" alt="Icon of delivery">
+                    <h3>Delivery to Your Doorstep</h3>
+                    <p>
+                        Enjoy your favorite cookies, fresh and warm, delivered right to your doorstep.
+                    </p>
+                </div>
+
+                <div class="icon-card">
+                    <img src="images/price-icon.svg" alt="Icon representing cheap price">
+                    <h3>Amazing Cookies at Great Prices</h3>
+                    <p>
+                        At our store, you get the best of both worlds—delicious cookies and pocket-friendly prices.
+                    </p>
+                </div>
+            </section>
+
+            <section class="sec-2">
+                <h2>Our Featured Products</h2>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                &copy;<span id="currentyear"></span> 🏐 Cristian Benites 🍪 Brazil
+            </p>
+            <p class="lastModified"></p>
+        </footer>
+        <script src="scripts/loopy.js" type="module"></script>
+    </body>
+</html>

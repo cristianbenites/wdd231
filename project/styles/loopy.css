@@ -149,8 +149,14 @@ header nav li {
 }
 
 header nav a {
-    border: 0;
     font-size: 1.2em;
+    border: 0;
+    border-bottom: 2px solid transparent;
+}
+
+header nav a.active,
+header nav a:hover {
+    border-color: var(--accent1-color);
 }
 
 header input[type="checkbox"]:not(:checked) ~ nav {
@@ -359,6 +365,32 @@ footer span {
     margin-left: 1rem;
 }
 
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 40rem;
+}
+
+.newsletter input {
+    display: block;
+    margin-top: .5rem;
+    padding: .5rem;
+    width: 100%;
+
+    border: 1px solid var(--primary-fg);
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+.newsletter h2 {
+    margin-bottom: 1rem;
+}
+
+.newsletter button {
+    max-width: 100%;
+}
+
 @media only screen and (min-width: 768px) {
     header {
         padding: 2rem;
@@ -466,9 +498,7 @@ footer span {
     }
 
     header nav a {
-        border: 0;
         font-size: 1.4em;
-        color: #000;
     }
 
     .hero .cta h2 {
@@ -480,6 +510,7 @@ footer span {
     }
 
     .cart,
+    .newsletter,
     .about {
         max-width: 1300px;
         margin: 0 auto;
@@ -492,6 +523,7 @@ footer span {
         max-width: 1300px;
     }
 
+    .newsletter,
     .about {
         padding: 0;
         margin-bottom: 2rem;

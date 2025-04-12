@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Catalog - Loopy Cookies</title>
+        <link rel="icon" href="favicon.ico">
+        <link href="styles/loopy.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+        <meta name="author" content="Cristian Benites">
+        <meta name="description" content="Loopy Cookies for all tastes | Cristian Benites | about page">
+
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <img src="images/logo.svg" alt="Loopy Cookies Logo">
+            </a>
+
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <span></span>
+                <span class="center">
+                    <span></span>
+                    <span></span>
+                </span>
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a class="active" href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="about">
+                <h2>About Us</h2>
+                <p>
+                    Welcome to Loopy Cookies, your go-to destination for the
+                    most delightful cookies in Sinop-MT. Our journey began in
+                    January 2024, born from a passion for creating the perfect
+                    cookie and a love for sharing that joy with others.
+                </p>
+                <p>
+                    Thank you for being a part of our cookie-loving community.
+                    We can't wait to share our passion with you, one delicious
+                    cookie at a time.
+                </p>
+            </section>
+            <section class="newsletter">
+                <h2>Subscribe For Exclusive Offers!</h2>
+                <form action="thankyou.html"
+                    method="get"
+                >
+                    <label>* First name: <input
+                        type="text"
+                        required
+                        name="name"
+                        autocomplete="given-name"
+                        title="Put your first name here"
+                        placeholder="John"
+                    ></label>
+                    <label>* Last name: <input
+                        type="text"
+                        required
+                        name="last"
+                        autocomplete="family-name"
+                        title="Put your family name here"
+                        placeholder="Doe"
+                    ></label>
+                    <label>* Email address: <input
+                        type="email"
+                        required
+                        name="email"
+                        autocomplete="email"
+                        title="Your best e-mail"
+                        placeholder="ceo@example.com"
+                    ></label>
+                    <label>* Phone number: <input
+                        type="tel"
+                        required
+                        name="phone"
+                        autocomplete="tel"
+                        title="Your phone number"
+                        placeholder="1-855-555-6502"
+                    ></label>
+                    <button type="submit">Receive Awesome Offers</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                &copy;<span id="currentyear"></span> 🏐 Cristian Benites 🍪 Brazil
+            </p>
+            <p class="lastModified"></p>
+        </footer>
+        <script src="scripts/loopy.js" type="module"></script>
+    </body>
+</html>
